@@ -26,7 +26,7 @@
 		A414361F247214CC0087BF43 /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		A414362124721DA30087BF43 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		A414362324721EA80087BF43 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
-		A463F03E2470E52C00773E75 /* GihubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GihubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A463F03E2470E52C00773E75 /* GithubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A463F0412470E52C00773E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A463F0432470E52C00773E75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A463F04A2470E52E00773E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,20 +54,20 @@
 		A463F0352470E52C00773E75 = {
 			isa = PBXGroup;
 			children = (
-				A463F0402470E52C00773E75 /* GihubFollowers */,
+				A463F0402470E52C00773E75 /* GithubFollowers */,
 			);
 			sourceTree = "<group>";
 		};
 		A463F03F2470E52C00773E75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A463F03E2470E52C00773E75 /* GihubFollowers.app */,
+				A463F03E2470E52C00773E75 /* GithubFollowers.app */,
 			);
 			name = Products;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		A463F0402470E52C00773E75 /* GihubFollowers */ = {
+		A463F0402470E52C00773E75 /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
 				A49AF62A2472424500E2821C /* Support */,
@@ -77,7 +77,7 @@
 				A463F03F2470E52C00773E75 /* Products */,
 				A463F04F2470E52E00773E75 /* Info.plist */,
 			);
-			path = GihubFollowers;
+			path = GithubFollowers;
 			sourceTree = "<group>";
 		};
 		A49AF6272472411200E2821C /* Screens */ = {
@@ -124,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A463F03D2470E52C00773E75 /* GihubFollowers */ = {
+		A463F03D2470E52C00773E75 /* GithubFollowers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A463F0522470E52E00773E75 /* Build configuration list for PBXNativeTarget "GihubFollowers" */;
+			buildConfigurationList = A463F0522470E52E00773E75 /* Build configuration list for PBXNativeTarget "GithubFollowers" */;
 			buildPhases = (
 				A463F03A2470E52C00773E75 /* Sources */,
 				A463F03B2470E52C00773E75 /* Frameworks */,
@@ -136,9 +136,9 @@
 			);
 			dependencies = (
 			);
-			name = GihubFollowers;
+			name = GithubFollowers;
 			productName = GihubFollowers;
-			productReference = A463F03E2470E52C00773E75 /* GihubFollowers.app */;
+			productReference = A463F03E2470E52C00773E75 /* GithubFollowers.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A463F0392470E52C00773E75 /* Build configuration list for PBXProject "GihubFollowers" */;
+			buildConfigurationList = A463F0392470E52C00773E75 /* Build configuration list for PBXProject "GithubFollowers" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A463F03D2470E52C00773E75 /* GihubFollowers */,
+				A463F03D2470E52C00773E75 /* GithubFollowers */,
 			);
 		};
 /* End PBXProject section */
@@ -344,8 +344,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrytafa.GihubFollowers;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrytafa.GithubFollowers;
+				PRODUCT_NAME = GithubFollowers;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -362,8 +362,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrytafa.GihubFollowers;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrytafa.GithubFollowers;
+				PRODUCT_NAME = GithubFollowers;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -372,7 +372,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A463F0392470E52C00773E75 /* Build configuration list for PBXProject "GihubFollowers" */ = {
+		A463F0392470E52C00773E75 /* Build configuration list for PBXProject "GithubFollowers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A463F0502470E52E00773E75 /* Debug */,
@@ -381,7 +381,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A463F0522470E52E00773E75 /* Build configuration list for PBXNativeTarget "GihubFollowers" */ = {
+		A463F0522470E52E00773E75 /* Build configuration list for PBXNativeTarget "GithubFollowers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A463F0532470E52E00773E75 /* Debug */,
