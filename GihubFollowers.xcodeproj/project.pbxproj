@@ -70,23 +70,55 @@
 		A463F0402470E52C00773E75 /* GihubFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				A463F0412470E52C00773E75 /* AppDelegate.swift */,
-				A463F0432470E52C00773E75 /* SceneDelegate.swift */,
+				A49AF62A2472424500E2821C /* Support */,
+				A49AF629247241E400E2821C /* Extensions */,
+				A49AF6282472418500E2821C /* Custom Views */,
+				A49AF6272472411200E2821C /* Screens */,
+				A463F03F2470E52C00773E75 /* Products */,
+				A463F04F2470E52E00773E75 /* Info.plist */,
+			);
+			path = GihubFollowers;
+			sourceTree = "<group>";
+		};
+		A49AF6272472411200E2821C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
 				A48A06D72470FF6B00BB4CC3 /* SearchVC.swift */,
-				A4C2B8552471D403006A6A57 /* FollowerListVC.swift */,
 				A48A06D92470FFB700BB4CC3 /* FavouritesListVC.swift */,
-				A49AF6252472302900E2821C /* UIViewController+Ext.swift */,
+				A4C2B8552471D403006A6A57 /* FollowerListVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A49AF6282472418500E2821C /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
 				A414361F247214CC0087BF43 /* GFTitleLabel.swift */,
 				A414362124721DA30087BF43 /* GFBodyLabel.swift */,
 				A414362324721EA80087BF43 /* GFAlertVC.swift */,
 				A4C2B8512471C294006A6A57 /* GFButton.swift */,
 				A4C2B8532471C650006A6A57 /* GFTextField.swift */,
-				A463F03F2470E52C00773E75 /* Products */,
-				A463F04A2470E52E00773E75 /* Assets.xcassets */,
-				A463F04C2470E52E00773E75 /* LaunchScreen.storyboard */,
-				A463F04F2470E52E00773E75 /* Info.plist */,
 			);
-			path = GihubFollowers;
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		A49AF629247241E400E2821C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A49AF6252472302900E2821C /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A49AF62A2472424500E2821C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A463F04C2470E52E00773E75 /* LaunchScreen.storyboard */,
+				A463F04A2470E52E00773E75 /* Assets.xcassets */,
+				A463F0432470E52C00773E75 /* SceneDelegate.swift */,
+				A463F0412470E52C00773E75 /* AppDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
