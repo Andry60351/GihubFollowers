@@ -113,8 +113,8 @@
 		A49AF62A2472424500E2821C /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				A463F04C2470E52E00773E75 /* LaunchScreen.storyboard */,
 				A463F04A2470E52E00773E75 /* Assets.xcassets */,
+				A463F04C2470E52E00773E75 /* LaunchScreen.storyboard */,
 				A463F0432470E52C00773E75 /* SceneDelegate.swift */,
 				A463F0412470E52C00773E75 /* AppDelegate.swift */,
 			);
