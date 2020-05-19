@@ -1,6 +1,11 @@
 # GithubFollowers
 With this iOS app it's possible to see a GitHub account profile and its followers. You can also save profiles in the "favourites". NOTE: This app is not finished yet.
 
+# Requirements
+ - MacOS catalina
+ - XCode 11
+ - Swift 5
+ 
 # How to clone and run 
 1) Open xcode
 2) Click on "Clone an existing project"
