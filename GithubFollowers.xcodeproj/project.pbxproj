@@ -339,7 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6C5KH7XGB;
-				INFOPLIST_FILE = GihubFollowers/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GithubFollowers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,7 +357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6C5KH7XGB;
-				INFOPLIST_FILE = GihubFollowers/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GithubFollowers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
