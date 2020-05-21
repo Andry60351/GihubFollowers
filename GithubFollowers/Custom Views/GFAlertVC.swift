@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Custom Alert 
 class GFAlertVC: UIViewController {
     
     let containerView = UIView() // homework? 12:10

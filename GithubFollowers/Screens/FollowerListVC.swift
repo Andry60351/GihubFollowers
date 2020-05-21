@@ -24,6 +24,11 @@ class FollowerListVC: UIViewController {
                 print(followers)
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "An error has occured", message: error.rawValue, buttonTitle: "OK")
+    
+                // automatically pop the FollowerListVC controller when there is an error message
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }
@@ -31,6 +36,6 @@ class FollowerListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
-    } 
+    }
     
 }
