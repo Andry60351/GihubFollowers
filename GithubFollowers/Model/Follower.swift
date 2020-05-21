@@ -9,7 +9,7 @@
 import Foundation
 
 struct Follower: Codable {
-    var login: String
+    var loxxgin: String
     var avatarUrl: String
     
 }
