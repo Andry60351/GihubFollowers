@@ -33,7 +33,7 @@ class NetworkManager {
             
             // if the response was successful (response of 200) move on, otherwise return
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(.failure(.userNotFound))
+                completed(.failure(.invalidResponse))
                 return
             }
             

@@ -11,6 +11,6 @@ import Foundation
 enum GFError: String, Error {
     case invalidUsername    = "This username has invalid characters, please try again."
     case unableToComplete   = "Unable to complete your request. Please check your internet connection."
-    case userNotFound       = "User not found, please try again."
+    case invalidResponse    = "Invalid response from the server, please try again."
     case invalidData        = "The data received from the server was invalid, please try again"
 }
