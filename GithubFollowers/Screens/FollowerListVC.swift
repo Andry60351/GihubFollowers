@@ -93,7 +93,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         let contentHeight   = scrollView.contentSize.height
         let height          = scrollView.frame.size.height
         
-        if offsetY > contentHeight - height {
+        if offsetY > (contentHeight - height) / 2 {
             guard hasMoreFollowers else { return }
             page += 1
             getFollowers(username: username, page: page)
