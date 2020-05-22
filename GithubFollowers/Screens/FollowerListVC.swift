@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FollowerListVC: UIViewController {
+final class FollowerListVC: UIViewController {
 
     enum Section { case main }
     
