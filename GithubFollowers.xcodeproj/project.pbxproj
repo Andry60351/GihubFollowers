@@ -141,7 +141,7 @@
 				A49AF62A2472424500E2821C /* Support */,
 				A49AF629247241E400E2821C /* Extensions */,
 				A49AF6282472418500E2821C /* Custom Views */,
-				A49AF6272472411200E2821C /* Screens */,
+				A49AF6272472411200E2821C /* ViewControllers */,
 				A463F03F2470E52C00773E75 /* Products */,
 				A463F04F2470E52E00773E75 /* Info.plist */,
 			);
@@ -157,14 +157,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		A49AF6272472411200E2821C /* Screens */ = {
+		A49AF6272472411200E2821C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				A48A06D72470FF6B00BB4CC3 /* SearchVC.swift */,
 				A4C2B8552471D403006A6A57 /* FollowerListVC.swift */,
 				A48A06D92470FFB700BB4CC3 /* FavouritesListVC.swift */,
 			);
-			path = Screens;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A49AF6282472418500E2821C /* Custom Views */ = {

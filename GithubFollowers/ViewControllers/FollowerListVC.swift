@@ -8,13 +8,14 @@
 
 import UIKit
 
-final class FollowerListVC: UIViewController {
+final class FollowerListVC: UIViewController, UISearchBarDelegate {
 
     enum Section { case main }
     
     var username: String!
     var followers: [Follower] = []
     var page: Int = 1
+    var filteredFollowers: [Follower] = []
     var hasMoreFollowers: Bool = true
     
     var collectionView: UICollectionView!
@@ -23,10 +24,10 @@ final class FollowerListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
+        configureSearchController()
         configureCollectionView()
         getFollowers(username: username, page: page)
         configureDataSource()
-
     }
     
     final func configureViewController() {
@@ -50,6 +51,17 @@ final class FollowerListVC: UIViewController {
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
     }
     
+    func configureSearchController() {
+        let searchController                        = UISearchController()
+        searchController.searchResultsUpdater       = self
+        searchController.searchBar.delegate         = self
+        searchController.searchBar.placeholder      = "Search for a username"
+        navigationItem.searchController             = searchController
+        navigationItem.hidesSearchBarWhenScrolling  = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+    }
+    
     final func getFollowers(username: String, page: Int) {
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
             guard let self = self else { return }
@@ -63,11 +75,12 @@ final class FollowerListVC: UIViewController {
                     DispatchQueue.main.async { self.showEmptyStateView(with: message, in: self.view) }
                     return
                 }
-                self.updateData()
+                self.updateData(on: self.followers)
+                
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "An error has occured", message: error.rawValue, buttonTitle: "OK")
     
-                // automatically pop the FollowerListVC controller when there is an error message
+                // automatically pop the FollowerListVC controller if there is an error message
                 DispatchQueue.main.async {
                     self.navigationController?.popViewController(animated: true)
                 }
@@ -76,7 +89,7 @@ final class FollowerListVC: UIViewController {
     }
     
     
-    final func configureDataSource() {
+    func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as! FollowerCell
             cell.set(follower: follower)
@@ -85,7 +98,7 @@ final class FollowerListVC: UIViewController {
         })
     }
     
-    func updateData() {
+    func updateData(on followers: [Follower]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
@@ -105,4 +118,17 @@ extension FollowerListVC: UICollectionViewDelegate {
             getFollowers(username: username, page: page)
         }
     }
+}
+
+
+extension FollowerListVC: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        filteredFollowers = followers.filter { $0.login.lowercased().contains(filter.lowercased()) }
+        updateData(on: filteredFollowers)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) { updateData(on: followers)
+}
 }

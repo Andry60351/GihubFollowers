@@ -8,11 +8,15 @@
 
 import UIKit
 
+
 class GFTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
+        #if DEBUG
+                text = "fabpot"
+        #endif
     }
     
     required init?(coder: NSCoder) {
@@ -40,3 +44,5 @@ class GFTextField: UITextField {
         placeholder = "Enter a username"
     }
 }
+
+
