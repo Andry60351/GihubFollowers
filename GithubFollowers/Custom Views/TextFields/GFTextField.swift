@@ -15,7 +15,7 @@ class GFTextField: UITextField {
         super.init(frame: frame)
         configure()
         #if DEBUG
-                text = "fabpot"
+                text = "sallen0400"
         #endif
     }
     
