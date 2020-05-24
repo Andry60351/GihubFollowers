@@ -28,7 +28,8 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
         configureSearchController()
         configureCollectionView()
         getFollowers(username: username, page: page)
-        configureDataSource()
+        configureDataSource()       
+        
     }
     
     final func configureViewController() {
@@ -41,9 +42,7 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    
-
-    
+        
     final func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
