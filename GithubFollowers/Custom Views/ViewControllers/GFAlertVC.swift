@@ -11,7 +11,7 @@ import UIKit
 // Custom Alert 
 class GFAlertVC: UIViewController {
     
-    let containerView = UIView() // homework? 12:10
+    let containerView = UIView()
     let titleLabel = GFTitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel = GFBodyLabel(textAlignment: .center)
     let actionButton = GFButton(backgroundColor: .systemPink, title: "Ok")
