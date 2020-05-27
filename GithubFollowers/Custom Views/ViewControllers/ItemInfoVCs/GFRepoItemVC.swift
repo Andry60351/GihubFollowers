@@ -15,6 +15,9 @@ class GFRepoItemVC: GFItemInfoVC {
         configureItems()
     }
     
+    override func actionButtonTapped() {
+        delegate.didTapGitHubProfile(for: user)
+    }
     
     private func configureItems() {
         itemInfoViewOne.set(itemInfoType: .repos, withCount: user.publicRepos)
