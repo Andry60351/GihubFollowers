@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - userInfoVCDelegate protocol
 protocol userInfoVCDelegate: class {
     func didTapGitHubProfile(for user: User)
     func didTapGetFollowers(for user: User)
@@ -15,6 +16,7 @@ protocol userInfoVCDelegate: class {
 
 class UserInfoVC: UIViewController {
     
+    // MARK: - variables
     let headerView  = UIView()
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
@@ -26,14 +28,15 @@ class UserInfoVC: UIViewController {
     var username: String!
     weak var delegate: FollowerListVCDelegate!
 
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureViewController()
         getUserInfo()
         layoutUI()
     }
     
+    // MARK: - configureViewController
     func configureViewController() {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         DispatchQueue.main.async {
@@ -42,6 +45,7 @@ class UserInfoVC: UIViewController {
         }
     }
     
+    // MARK: - getUserInfo
     func getUserInfo() {
         NetworkManager.shared.getUserInfo(for: username) {[weak self] result in
             guard let self = self else { return }
@@ -56,6 +60,7 @@ class UserInfoVC: UIViewController {
         }
     }
     
+    // MARK: - configureUIElements
     func configureUIElements(with user: User) {
         
         let repoItemVC = GFRepoItemVC(user: user)
@@ -70,6 +75,7 @@ class UserInfoVC: UIViewController {
         self.dateLabel.text = "GitHub since \(user.createdAt.convertToDisplayFormat())"
     }
     
+    // MARK: - layoutUI
     func layoutUI() {
         itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
         
@@ -114,6 +120,7 @@ class UserInfoVC: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension UserInfoVC: userInfoVCDelegate {
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {

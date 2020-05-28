@@ -11,18 +11,18 @@ import UIKit
 
 class GFTextField: UITextField {
     
+    // MARK: - override init
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        #if DEBUG
-                text = "sallen0400"
-        #endif
     }
     
+    // MARK: - required init
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - configure
     private final func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         

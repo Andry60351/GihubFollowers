@@ -10,17 +10,18 @@ import UIKit
 
 class GFTitleLabel: UILabel {
 
+    // MARK: - override init
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
     
-    
+    // MARK: - required init
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    // MARK: - init
     init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
         super.init(frame: .zero)
         self.textAlignment = textAlignment
@@ -28,7 +29,7 @@ class GFTitleLabel: UILabel {
         configure()
     }
     
-    
+    // MARK: - configure
     private func configure() {
         textColor                   = .label
         adjustsFontSizeToFitWidth   = true

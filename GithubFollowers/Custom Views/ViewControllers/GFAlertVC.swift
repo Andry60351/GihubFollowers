@@ -8,9 +8,9 @@
 
 import UIKit
 
-// Custom Alert 
 class GFAlertVC: UIViewController {
     
+    // MARK: - variables
     let containerView = UIView()
     let titleLabel = GFTitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel = GFBodyLabel(textAlignment: .center)
@@ -22,6 +22,7 @@ class GFAlertVC: UIViewController {
     
     let padding: CGFloat = 20
     
+    // MARK: - init
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
         self.alertTitle = title
@@ -29,10 +30,12 @@ class GFAlertVC: UIViewController {
         self.buttonTitle = buttonTitle
     }
     
+    // MARK: - required init
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.75)

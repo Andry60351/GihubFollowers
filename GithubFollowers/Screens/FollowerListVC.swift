@@ -16,6 +16,7 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
 
     enum Section { case main }
     
+    // MARK: - variables
     var username: String!
     var followers: [Follower] = []
     var page: Int = 1
@@ -26,6 +27,7 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
         
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -36,18 +38,21 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
         
     }
     
-    final func configureViewController() {
+    // MARK: - configureViewController
+    func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
         
-    final func configureCollectionView() {
+    // MARK: - configureCollectionView
+    func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
         collectionView.delegate = self
@@ -55,6 +60,7 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
     }
     
+    // MARK: - configureSearchController
     func configureSearchController() {
         let searchController                        = UISearchController()
         searchController.searchResultsUpdater       = self
@@ -66,6 +72,7 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
         
     }
     
+    // MARK: - getFollowers
     final func getFollowers(username: String, page: Int) {
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
             guard let self = self else { return }
@@ -92,7 +99,7 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
         }
     }
     
-    
+    // MARK: - configureDataSource
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as! FollowerCell
@@ -102,6 +109,7 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
         })
     }
     
+    // MARK: - updateData
     func updateData(on followers: [Follower]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
@@ -110,6 +118,7 @@ final class FollowerListVC: UIViewController, UISearchBarDelegate {
     }
 }
 
+// MARK: - Extensions
 extension FollowerListVC: UICollectionViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let offsetY         = scrollView.contentOffset.y
@@ -164,3 +173,5 @@ extension FollowerListVC: FollowerListVCDelegate {
         getFollowers(username: username, page: page)
     }
 }
+
+

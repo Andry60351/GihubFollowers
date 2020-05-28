@@ -8,33 +8,34 @@
 
 import UIKit
 
+// MARK: - ItemInfoType
 enum ItemInfoType {
     case repos, gists, followers, following
 }
 
 class GFItemInfoView: UIView {
     
+    // MARK: - variables
     let symbolImageView = UIImageView()
     let titleLabel = GFTitleLabel(textAlignment: .left, fontSize: 14)
     let countLabel = GFTitleLabel(textAlignment: .center, fontSize: 14)
     
+    // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
     
+    // MARK: - required init
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - configure
     private func configure() {
-//        [symbolImageView, titleLabel, countLabel].forEach { (UIView) in
-//            addSubview(UIView)
-//        }
-        
-        addSubview(symbolImageView)
-        addSubview(titleLabel)
-        addSubview(countLabel)
+        [symbolImageView, titleLabel, countLabel].forEach { (UIView) in
+            addSubview(UIView)
+        }
         
         symbolImageView.translatesAutoresizingMaskIntoConstraints = false
         symbolImageView.contentMode = .scaleToFill
@@ -58,6 +59,7 @@ class GFItemInfoView: UIView {
         
     }
     
+    // MARK: - setIconInInfoView
     func set(itemInfoType: ItemInfoType, withCount count:Int) {
         switch itemInfoType {
         case .repos:

@@ -10,6 +10,7 @@ import UIKit
 
 class GFUserInfoHeaderVC: UIViewController {
     
+    // MARK: - variables
     let avatarImageView   = GFAvatarImageView(frame: .zero)
     let usernameLabel     = GFTitleLabel(textAlignment: .left, fontSize: 34)
     let nameLabel         = GFSecondaryTitleLabel(fontSize: 18)
@@ -19,18 +20,18 @@ class GFUserInfoHeaderVC: UIViewController {
     
     var user: User!
     
-    
+    // MARK: - init
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
         self.user = user
     }
     
-    
+    // MARK: - required init
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -38,7 +39,7 @@ class GFUserInfoHeaderVC: UIViewController {
         configureUIElements()
     }
     
-    
+    // MARK: - configureUIElements
     func configureUIElements() {
         avatarImageView.downloadImage(from: user.avatarUrl)
         usernameLabel.text      = user.login
@@ -52,17 +53,16 @@ class GFUserInfoHeaderVC: UIViewController {
         locationImageView.tintColor = .secondaryLabel
     }
     
-    
+    // MARK: - addSubViews
     func addSubviews() {
-        view.addSubview(avatarImageView)
-        view.addSubview(usernameLabel)
-        view.addSubview(nameLabel)
-        view.addSubview(locationImageView)
-        view.addSubview(locationLabel)
-        view.addSubview(bioLabel)
+        [avatarImageView, usernameLabel, nameLabel,
+         locationImageView, locationLabel, bioLabel].forEach { [weak self] (view) in
+            guard let self = self else { return }
+            self.view.addSubview(view)
+        }
     }
     
-    
+    // MARK: - layoutUI
     func layoutUI() {
         let padding: CGFloat            = 20
         let textImagePadding: CGFloat   = 12
