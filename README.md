@@ -1,5 +1,5 @@
 # GithubFollowers
-With this iOS app it's possible to check someone's github followers ditails. You can also save profiles in the "favourites" tab.
+With this iOS app it's possible to check someone's github followers details. You can also save profiles in the "favourites" tab.
 NOTE: This app is not finished yet.
 
 # Requirements
