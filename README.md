@@ -6,6 +6,7 @@ NOTE: This app is not finished yet.
  - MacOS catalina
  - XCode 11
  - Swift 5
+ - an iPhone with iOS 13.0 +
  
 # How to clone and run 
 1) Open xcode
