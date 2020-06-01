@@ -13,6 +13,7 @@ class GFBodyLabel: UILabel {
     // MARK: - override init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configure()
     }
     
     // MARK: - required init
@@ -21,10 +22,9 @@ class GFBodyLabel: UILabel {
     }
     
     // MARK: - init
-    init(textAlignment: NSTextAlignment) {
-        super.init(frame: .zero)
+    convenience init(textAlignment: NSTextAlignment) {
+        self.init(frame: .zero)
         self.textAlignment = textAlignment
-        configure()
     }
     
     // MARK: - configure
