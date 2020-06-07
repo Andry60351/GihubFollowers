@@ -21,7 +21,7 @@ class GFAlertVC: UIViewController {
     var buttonTitle: String?
     
     let padding: CGFloat = 20
-    
+
     // MARK: - init
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
@@ -56,8 +56,7 @@ class GFAlertVC: UIViewController {
             containerView.widthAnchor.constraint(equalToConstant: 280),
             containerView.heightAnchor.constraint(equalToConstant: 220)
         ])
-    }
-    
+    }    
     
     // MARK: - configureTitleLabel
     func configureTitleLabel() {
