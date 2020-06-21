@@ -15,5 +15,5 @@ With this iOS app it's possible to check someone's github followers details. You
 3) On the search bar on the top, paste the url of this repo and click clone.
 
 # More screenshots
-<img src="Screenshots/githubFollowersHomeScreen.png" width=450> <img src="Screenshots/githubFollowersCustomPopUp.png" width=450>
+<img src="Screenshots/githubFollowersHomeScreen.png" width=420> <img src="Screenshots/githubFollowersCustomPopUp.png" width=420>
 
