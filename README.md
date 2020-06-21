@@ -2,7 +2,7 @@
 <img src="Screenshots/githubFollowersHomeScreen.png" width=200> <img src="Screenshots/githubFollowersCustomPopUp.png" width=200>
 
 With this iOS app it's possible to check someone's github followers and view their profiles.
-You can also save GitHub profiles locally in the "favourites" tab and remove them. with gestures.
+You can also save GitHub profiles locally in the "favourites" tab and remove them with gestures.
 
 <img src="Screenshots/githubFollowers.png" width=570> <img src="Screenshots/GHF.jpg" height=400> 
 
