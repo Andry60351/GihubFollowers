@@ -16,3 +16,4 @@ NOTE: This app is not finished yet.
 # App screenshots
 ![screenshot1](Screenshots/githubFollowers.png)
 ![screenshot2](Screenshots/githubFollowersCustomPopUp.png)
+![screenshot3](Screenshots/GHF.jpg)
