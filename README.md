@@ -15,6 +15,5 @@ You can also save GitHub profiles locally in the "favourites" tab and remove the
 2) Click on "Clone an existing project"
 3) On the search bar on the top, paste the url of this repo and click clone.
 
-# More screenshots
 <img src="Screenshots/githubFollowersHomeScreen.png" width=420> <img src="Screenshots/githubFollowersCustomPopUp.png" width=420>
 
