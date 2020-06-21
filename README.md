@@ -12,7 +12,7 @@ You can also save GitHub profiles locally in the "favourites" tab and remove the
  - Swift 5
  - an iPhone with iOS 13.0 +
  
-# How to clone and run 
+# How to clone
 1) Open xcode
 
 2) Click on "Clone an existing project"
