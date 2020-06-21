@@ -14,5 +14,5 @@ NOTE: This app is not finished yet.
 3) On the search bar on the top, paste the url of this repo and click clone.
 
 # App screenshots
-![](Screenshots/githubFollowers.png)
-![](Screen/githubFollowersCustomPopUp.png)
+![screenshot1](Screenshots/githubFollowers.png)
+![screenshot2](Screenshots/githubFollowersCustomPopUp.png)
