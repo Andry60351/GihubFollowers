@@ -1,4 +1,4 @@
-# GithubFollowers
+# GithubFollowers app
 <img src="Screenshots/githubFollowersHomeScreen.png" width=200> <img src="Screenshots/githubFollowersCustomPopUp.png" width=200>
 
 With this iOS app it's possible to check someone's github followers details.
