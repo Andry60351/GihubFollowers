@@ -15,3 +15,4 @@ NOTE: This app is not finished yet.
 
 # App screenshots
 ![](Screenshots/githubFollowers.png)
+![](Screen/githubFollowersCustomPopUp.png)
