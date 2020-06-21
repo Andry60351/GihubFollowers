@@ -1,4 +1,6 @@
 # GithubFollowers
+<img src="Screenshots/githubFollowersHomeScreen.png" width=200> <img src="Screenshots/githubFollowersCustomPopUp.png" width=200>
+
 With this iOS app it's possible to check someone's github followers details.
 You can also save GitHub profiles locally in the "favourites" tab and remove them. with gestures.
 
@@ -12,8 +14,9 @@ You can also save GitHub profiles locally in the "favourites" tab and remove the
  
 # How to clone and run 
 1) Open xcode
+
 2) Click on "Clone an existing project"
+<img src="Screenshots/Step1.png" height=300>
+
 3) On the search bar on the top, paste the url of this repo and click clone.
-
-<img src="Screenshots/githubFollowersHomeScreen.png" width=420> <img src="Screenshots/githubFollowersCustomPopUp.png" width=420>
-
+<img src="Screenshots/Step2&Step3.png" height=300>
