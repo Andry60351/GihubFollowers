@@ -20,3 +20,6 @@ You can also save GitHub profiles locally in the "favourites" tab and remove the
 
 3) Paste the link on the search bar, and click clone.
 <img src="Screenshots/Step2&Step3.png" height=300>
+
+# Technologies used
+This app has been made from scratch (no framework used) with Swift5, XCode, programmaticUI and the MVC architecture.
