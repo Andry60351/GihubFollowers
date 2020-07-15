@@ -15,7 +15,7 @@ You can also save GitHub profiles locally in the "favourites" tab and remove the
 
 
 # Technologies used
-This app has been made from scratch (no framework used) with Swift5, XCode, programmaticUI, the GitHub API and the MVC architecture.
+This app has been made from scratch (no 3rd party libraries used) with Swift5, XCode, programmaticUI, the GitHub API and the Model-View-Controller (MVC) architecture.
 
 
 # Requirements
