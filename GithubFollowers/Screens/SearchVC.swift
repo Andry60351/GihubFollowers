@@ -9,8 +9,6 @@
 import UIKit
 
 class SearchVC: UIViewController {
-
-    // MARK: - properties
     
     let logoImageView = UIImageView()
     let usernameTextField = GFTextField()
@@ -19,7 +17,6 @@ class SearchVC: UIViewController {
     
     var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
     
-    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -29,20 +26,17 @@ class SearchVC: UIViewController {
         createDismissKeyboardTapGesture()
     }
     
-    // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         usernameTextField.text = ""
         navigationController?.isNavigationBarHidden = true
     }
     
-    // MARK: -createDismissKeyboardTapGesture
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
     
-    // MARK: -pushFollowerListVC
     @objc func pushFollowerListVC() {
         
         guard isUsernameEntered else { 
@@ -54,7 +48,6 @@ class SearchVC: UIViewController {
         navigationController?.pushViewController(followerListVC, animated: true)
     }
     
-    // MARK: - configureLogoImageView
     func configureLogoImageView() {
         view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -72,7 +65,6 @@ class SearchVC: UIViewController {
         ])
     }
     
-    // MARK: - configureTextField
     func configureTextField() {
         view.addSubview(usernameTextField)
         usernameTextField.delegate = self
@@ -84,7 +76,6 @@ class SearchVC: UIViewController {
         ])
     }
     
-    // MARK: - configureCallToAction
     func configureCallToActionButton() {
         callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         
@@ -98,7 +89,6 @@ class SearchVC: UIViewController {
     }
 }
 
-// MARK: - extensions
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("Did tap return")
