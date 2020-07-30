@@ -10,30 +10,25 @@ import UIKit
 
 class FavouritesListVC: UIViewController {
 
-    // MARK: - properties
     let tableView = UITableView()
     var favourites: [Follower] = []
     
-    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
         configureTableView()
     }
     
-    // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         getFavourites()
     }
     
-    // MARK: - configureViewController
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = false
     }
     
-    // MARK: - configureTableView
     func configureTableView() {
         view.addSubview(tableView)
         tableView.frame = view.bounds
@@ -43,7 +38,6 @@ class FavouritesListVC: UIViewController {
         tableView.dataSource = self
     }
     
-    // MARK: - getFavourites
     func getFavourites() {
         PersistenceManager.retrieveFavourites { [weak self] result in
             guard let self = self else { return }
